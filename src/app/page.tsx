@@ -1,9 +1,13 @@
+'use client';
+
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Vercel } from "./vercel";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      какия нибудь статика
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -16,14 +20,8 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
+
+            <Vercel />
           </a>
         </div>
       </div>
