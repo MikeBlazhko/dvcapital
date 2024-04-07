@@ -1,0 +1,119 @@
+.block{
+    background: #FEFFEF;
+}
+
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 0;
+}
+
+
+.header{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 43.88px;
+    color: #191919;
+}
+
+.items{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.column span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #191919;
+}
+
+.column span ol li{
+    margin-left: 20px;
+}
+
+.column span ul li{
+    margin-left: 25px;
+}
+
+
+
+.item{
+    cursor: pointer;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #191919;
+    
+}
+
+.item span{
+    display: none;
+}
+
+ .item.activeItem{
+    color: #3A7DFF;
+    border-bottom: 1px solid #3A7DFF;
+    
+}
+
+.activeItem span{
+    display: block;
+}
+
+@keyframes rotate-arrow {
+    from {
+        transform: rotate(270deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes unrotate-arrow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(270deg);
+    }
+}
+
+.icon{
+width: 32px;
+height: 32px;
+}
+.icon svg path{
+    stroke: #191919;
+}
+
+.icon svg {
+    
+    transform: rotate(270deg);
+    animation: unrotate-arrow; 
+    animation-duration: 0.3s;
+}
+
+.icon.activeIcon svg path{
+    stroke: #3A7DFF;
+}
+
+.icon.activeIcon svg{
+    animation: rotate-arrow; 
+    animation-duration: 0.3s; 
+
+    transform: rotate(0deg);    
+}

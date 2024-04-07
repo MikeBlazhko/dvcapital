@@ -1,0 +1,128 @@
+.block{
+    background: #191919;
+}
+
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 0 60px;
+}
+
+
+.header{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 43.88px;
+    color: #FFFFFF;
+}
+
+.mainRow{
+    margin-top: 60px;   
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.column span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26.4px;
+    color: #FFFFFF;
+}
+
+.info{
+    padding: 20px;
+    background: #FFFFFF1A;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.infoTitle{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26.4px;
+    color: #FFFFFF;
+}
+
+.info span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.infoValue{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.infoValue svg path{
+    stroke: #fff;
+}
+
+.button{
+    border-radius: 0;
+}
+
+.divider{
+    height: 1px;
+    background: #686868;
+    width: 100%;
+    margin: 60px 0;
+}
+
+.footer{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.buttons{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 21px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.footerLinks{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footerLinks span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 21px;
+    color: #686868;
+}
+
+.link{
+    text-decoration: underline;
+    cursor: pointer;
+}

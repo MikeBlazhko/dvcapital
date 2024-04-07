@@ -1,0 +1,27 @@
+
+.button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 21px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 20px 30px;
+    border-radius: 6px;
+    background: #3A7DFF;
+    border: unset;
+}
+
+
+.button .flex{
+    width: 100%;
+    min-width: 100%;
+}
+
+.button:hover{
+    background: #1262FF;
+}

@@ -1,0 +1,28 @@
+.input{
+    width: 100%;
+    display: inline-flex;
+    gap: 8px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #191919;   
+}
+
+.input input{
+    width: 100%;
+    background: unset;
+    border: unset;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    text-transform: none;
+    font-weight: 500;
+    line-height: 26.4px;
+    color: #191919;
+}
+
+.input input::placeholder{
+    color: #191919;
+}
+
+.input input:focus-visible{
+    border: unset;
+    outline: unset;
+}

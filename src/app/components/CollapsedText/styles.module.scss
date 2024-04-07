@@ -1,0 +1,45 @@
+
+
+.block{
+  opacity: 0;
+  max-width: 760px;
+  &.blockShow{
+    opacity: 1;
+    &:not(.blockExpanded){
+      .blockDescription{
+        overflow: hidden;
+        display: -webkit-box;
+        line-clamp: 3;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
+
+.blockDescription{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 21px;
+  white-space: pre-wrap;
+  color: #FFFFFF;
+}
+.blockMore{
+  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 21px;
+
+  color: #3A7DFF;
+
+  svg{
+    transform: translateY(-1px);
+  }
+}
