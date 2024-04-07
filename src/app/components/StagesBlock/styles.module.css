@@ -30,7 +30,7 @@
     margin-top: 60px;
     display: inline-flex;
     justify-content: flex-end;
-    gap: 94px;
+    gap: 100px;
     width: 100%;
 }
 
@@ -105,5 +105,6 @@
     font-weight: 500;
     line-height: 33.6px;
     color: #191919;
+    transform: translateY(5px);
 
 }

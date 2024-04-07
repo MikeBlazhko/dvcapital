@@ -10,8 +10,8 @@ export const MapBlock: React.FC = () => {
             <div className={styles.background}>
                 <Image src={MapImage} alt="image"/>
             </div>
-            <div>
-                <span className={styles.mainText}>Основным нашим направлением является оказание факторинговых услуг, преимущественно </span>
+            <div className={styles.mainText}>
+                <span>Основным нашим направлением является оказание факторинговых услуг, преимущественно </span>
                 <span className={styles.blueText}>российским дальневосточным торговым и производственным компаниям.</span>
             </div>
             <div className={styles.row}>

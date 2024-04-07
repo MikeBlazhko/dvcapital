@@ -6,7 +6,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 120px;
-    padding-bottom: 117px;
+    padding-bottom: 123px;
 }
 
 .header{
@@ -52,7 +52,7 @@
 .valueContent{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 24px;
     z-index: 2;
 }
 
@@ -62,4 +62,5 @@
     font-weight: 500;
     line-height: 43.88px;
     color: #FFFFFF;
+    letter-spacing: 2.7px;
 }

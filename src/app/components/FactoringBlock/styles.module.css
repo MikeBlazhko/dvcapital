@@ -31,14 +31,15 @@
     font-weight: 500;
     line-height: 43.88px;
     color: #3A7DFF;
+    letter-spacing: 1.8px;
 }
 
 .text{
-    margin-top: 60px;
-    margin-bottom: 40px;
+    margin-top: 56px;
+    margin-bottom: 34px;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 48px;
     margin-right: 353px;
 }
 
@@ -48,6 +49,7 @@
     font-weight: 500;
     line-height: 26.4px;
     color: #FFFFFF;
+    letter-spacing: 1.3px;
 }
 
 .values{
@@ -59,11 +61,11 @@
 .value{
     background: #FFFFFF33;
     backdrop-filter: blur(2px);
-    padding: 20px;
+    padding: 20px 20px 14px;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
     color: #EDF1FF;
 }
 

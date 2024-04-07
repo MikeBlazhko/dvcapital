@@ -47,7 +47,6 @@ export const StagesBlock: React.FC = () => {
                             {activeValue.text === val.text && (<div className={styles.center}/>)}
                             </div>
                         </div>
-
                     ))}
                 </div>
                 <div className={styles.rowValue}>

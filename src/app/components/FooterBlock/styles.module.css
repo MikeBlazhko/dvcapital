@@ -40,12 +40,13 @@
 }
 
 .info{
-    padding: 20px;
+    max-width: 600px;
+    padding: 16px 20px 20px;
     background: #FFFFFF1A;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 13px;
 }
 
 .infoTitle{
@@ -54,6 +55,7 @@
     font-weight: 500;
     line-height: 26.4px;
     color: #FFFFFF;
+    letter-spacing: 1.5px;
 }
 
 .info span {
@@ -62,6 +64,7 @@
     font-weight: 600;
     line-height: 21px;
     color: #FFFFFF;
+    letter-spacing: 0.6px;
 }
 
 .infoValue{
@@ -83,7 +86,7 @@
     height: 1px;
     background: #686868;
     width: 100%;
-    margin: 60px 0;
+    margin: 60px 0 52px;
 }
 
 .footer{

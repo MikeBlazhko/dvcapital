@@ -39,7 +39,7 @@ export const CollapsedText: React.FC<Props> = (props) => {
       />
       {!expanded && (
         <div className={styles.blockMore} onClick={() => setExpanded(true)}>
-         <span>Читать подробнее</span>
+         <span>Развернуть</span>
          <ArrowIcon/>
         </div>
       )}

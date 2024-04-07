@@ -20,7 +20,7 @@ const ExpandedItem: React.FC<PropsWithChildren<Props>> = ({children, title}) => 
             onClick={() => setOpen(!open)} 
             >
             <div className={styles.column}>
-                <div>{title}</div>
+                <div className={styles.columnTitle}>{title}</div>
                 <span>{children}</span>
             </div>
             <div className={classNames(styles.icon, `${open && styles.activeIcon}`)}>

@@ -13,16 +13,16 @@ export const HeaderBlock: React.FC = () => {
             </div>
             <div className={styles.content}>
                 <div className={styles.row}>
-                <LogoIcon/>
-                <div className={styles.menu}>
-                    <div className={styles.button}>О компании</div>
-                    <div className={styles.button}>Услуги</div>
-                    <div className={styles.button}>Этапы работы</div>
-                    <div className={styles.button}>FAQ</div>
-                    <div className={styles.button}>Контакты</div>
-                    <div className={styles.button}>Личный кабинет</div>
-                    <Button>Связаться</Button>
-                </div>
+                    <LogoIcon/>
+                    <div className={styles.menu}>
+                        <div className={styles.button}>О компании</div>
+                        <div className={styles.button}>Услуги</div>
+                        <div className={styles.button}>Этапы работы</div>
+                        <div className={styles.button}>FAQ</div>
+                        <div className={styles.button}>Контакты</div>
+                        <div className={styles.button}>Личный кабинет</div>
+                        <Button>Связаться</Button>
+                    </div>
                 </div>
                 <div className={styles.mainText}>
                     {"Факторинговые услуги\nдля дальневосточных\nкомпаний"}
