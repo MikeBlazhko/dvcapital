@@ -119,6 +119,10 @@
     align-self: center;
     justify-content: center;
     gap: 40px;
+     @media screen and (max-width: 650px) {
+        padding: 40px;
+        
+    }
 }
 
 .succesColumn svg{
