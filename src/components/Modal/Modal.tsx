@@ -22,6 +22,19 @@ export const Modal: React.FC<Props> = ({open, onClose}) => {
    const [checked, setChecked] = useState(false);
    const [success, setSuccess] = useState(false);
 
+   const sendForm =() =>  {
+    return fetch('http://dvcapital.ru/mail.php', {
+        method: 'POST',
+        headers: {
+            "Content-type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({name, phone})
+    })
+    .then(response => response.json())
+    .then(body => console.log(body))
+    .catch(error => console.error('Error:', error));
+}
 
     return (
         <AntModal 
@@ -34,9 +47,9 @@ export const Modal: React.FC<Props> = ({open, onClose}) => {
             closeIcon={<div className={styles.closeIcon}><XCircleIcon/></div>}>
             <div className={styles.block}>
                 {!success && (
-                    <div className={styles.column}>
+                    <div className={styles.column}  >
                         <div className={styles.header}>
-                            Ответим на все ваши вопросы и подберем нужный вид факторинга для вашей компании
+                            Ответим на все ваши вопросы и подберем нужный вид факторинга для вашей компании 
                             </div>
                             <Input 
                                 placeholder="Имя" 
@@ -62,7 +75,8 @@ export const Modal: React.FC<Props> = ({open, onClose}) => {
                         </div>
                         <Button 
                         disabled={!checked || name.trim().length === 0 || phone.replace("_", '').trim().length !== 18}
-                            onClick={() => setSuccess(true)}>
+                            onClick={sendForm} 
+                            >
                             Связаться
                         </Button>
                     </div>
