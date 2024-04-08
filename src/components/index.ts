@@ -7,3 +7,4 @@ export * from './UserBlock';
 export * from './StagesBlock';
 export * from './FooterBlock';
 export * from "./FaqBlock";
+export * from './ProfileBlock';

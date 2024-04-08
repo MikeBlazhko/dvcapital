@@ -26,3 +26,20 @@
     border: unset;
     outline: unset;
 }
+
+
+.input.white input {
+    color: #fff;
+}
+
+.input.white input::placeholder{
+    color: #fff;
+}
+
+.input.white{
+    border-bottom: 1px solid #fff;   
+}
+
+.input.white svg path{
+    stroke: #fff;
+}
