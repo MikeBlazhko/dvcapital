@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from './styles.module.css';
 import InputMask from 'react-input-mask';
 import { classNames } from "@/utils";
@@ -18,14 +18,13 @@ interface Props {
 
 export const Input: React.FC<Props> = (props) => {
     const {placeholder, before, withMask, value, onChange, name, type, white, className, readOnly} = props;
-    const [localValue, setLocalValue] = useState(value ?? '');
 
       const handleChange =(e: any)=> {
-        setLocalValue(e.target.value);
         if (onChange){
             onChange(e.target.value);
         }
     }
+
 
     return (
         // @ts-ignore
@@ -33,7 +32,7 @@ export const Input: React.FC<Props> = (props) => {
             <>{before}</>
             {withMask ? 
             (<InputMask mask={"+9 (999) 999-99-99"} id={name} name={name} type={type}
-                value={localValue} 
+                value={value} 
                 readOnly={readOnly}
                 onChange={handleChange} >
                 <input name={name} id={name} type={type} placeholder={placeholder} />
@@ -45,7 +44,7 @@ export const Input: React.FC<Props> = (props) => {
                     readOnly={readOnly}
                     placeholder={placeholder} 
                     name={name}
-                    value={localValue} 
+                    value={value} 
                     onChange={handleChange} />
             )}
             

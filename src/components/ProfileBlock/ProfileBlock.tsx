@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from './styles.module.css';
 import Image from "next/image";
 import HeaderImage from "@/assets/images/header.png";
@@ -20,6 +20,9 @@ export const ProfileBlock: React.FC = () => {
     const [drawer, setDrawer] = useState(false);
     const [modal, setModal] = useState(false);
     const [login, setLogin] = useState(false);
+    const [userName, setUserName] = useState('');
+    const [password, setPassword] = useState('');
+
     const onScrollToBlock = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
@@ -27,6 +30,15 @@ export const ProfileBlock: React.FC = () => {
             setDrawer(false);
         }
     }
+
+    useEffect(() => {
+        if (login){
+            setPassword('');
+            setUserName('');
+            setLogin(false);
+        }
+
+    },[password, userName]);
 
     return (
         <div className={styles.block} id='HeaderBlock'>
@@ -95,15 +107,23 @@ export const ProfileBlock: React.FC = () => {
                     <div className={styles.formHeader}>
                         Вход в личный кабинет
                     </div>
-                    <Input white before={<UserIcon/>} placeholder="Логин" readOnly={login}/>
+                    <Input white before={<UserIcon/>} 
+                        placeholder="Логин" 
+                        value={userName} 
+                        onChange={(e) => {
+                            setUserName(e);
+                        }}/>
                     <div className={styles.passwordInput}>
                         {login && <span>Неверно введен пароль</span>}
                         <Input 
-                            readOnly={login} 
                             white 
                             before={<LockIcon/>} 
                             className={login ? styles.redIcon : undefined} 
                             placeholder="Пароль" 
+                            value={password} onChange={(e) => {
+                                setPassword(e);
+
+                            }}
                             type="password"/>
                     </div>
                     <Button flex disabled={login} onClick={() => setLogin(!login)}>Войти</Button>

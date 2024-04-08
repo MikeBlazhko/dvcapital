@@ -16,6 +16,11 @@
     font-weight: 500;
     line-height: 26.4px;
     color: #191919;
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+
 }
 
 .input input::placeholder{
