@@ -6,11 +6,18 @@ interface Props {
     flex?: boolean;
     onClick?: () => void;
     className?: string;
+    disabled?: boolean;
 }
 
-export const Button: React.FC<PropsWithChildren<Props>> = ({children, flex = false, className, onClick}) => {
+export const Button: React.FC<PropsWithChildren<Props>> = ({children, flex = false, className, onClick, disabled}) => {
     return (
-        //@ts-ignore
-        <button className={classNames(styles.button, flex && styles.flex, className)} onClick={onClick}>{children}</button>
+      
+        <button 
+            //@ts-ignore
+            className={classNames(styles.button, flex && styles.flex, disabled && styles.disabled, className)}disabled={disabled} 
+            onClick={onClick}
+            >
+                {children}
+            </button>
     );
 }

@@ -33,7 +33,7 @@ export const StagesBlock: React.FC = () => {
 
     const [activeValue, setActiveValue] = useState(values[0]);
     return (
-        <div className={styles.block}>
+        <div className={styles.block} id='StagesBlock'>
             <div className={styles.content}>
                 <div className={styles.header}>Этапы работы</div>
                 <div className={styles.divider}/>

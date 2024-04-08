@@ -7,6 +7,15 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 120px 0;
+    @media screen and (max-width: 1201px) {
+        padding: 120px 26px 158px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 100px 14px;
+    }
+    @media screen and (max-width: 650px) {
+        padding: 80px 18px;
+    }
 }
 
 .header{
@@ -24,6 +33,12 @@
     background: #686868;
     height: 1px;
     width: 100vw;
+    @media screen and (max-width: 768px) {
+        top: 284px;
+    }
+     @media screen and (max-width: 650px) {
+        top: 226px;
+    }
 }
 
 .row{
@@ -32,12 +47,23 @@
     justify-content: flex-end;
     gap: 100px;
     width: 100%;
+    @media screen and (max-width: 1201px) {
+        gap: 70px;
+    }
+    @media screen and (max-width: 768px) {
+        gap: unset;
+        justify-content: space-between;
+    }
+    @media screen and (max-width: 650px) {
+        margin-top: 40px;
+    }
 }
 
 
 .value{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 18px;
     cursor: pointer;
 }
@@ -48,6 +74,11 @@
     font-weight: 500;
     line-height: 43.88px;
     color: #686868;
+    @media screen and (max-width: 650px) {
+        font-size: 22px;
+        line-height: 26.82px;
+        text-align: center;
+    }
 }
 
 
@@ -82,10 +113,18 @@
 
 .rowValue{
     margin-top: 40px;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 105px;
+    @media screen and (max-width: 1201px) {
+        gap: 40px;
+    }
+    @media screen and (max-width: 650px) {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 .icon{
@@ -97,6 +136,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 1201px) {
+        min-width: 427px;
+        width: 427px;
+        height: 240.3px;
+    }
+    @media screen and (max-width: 768px) {
+        min-width: 330px;
+        width: 330px;
+        height: 185px;
+    }
+    @media screen and (max-width: 650px) {
+        width: 100%;
+        height: 190px;
+    }
+}
+
+.icon svg{
+    @media screen and (max-width: 650px) {
+        width: 158.3px;
+        height: 111.4px;
+    }
 }
 
 .rowValue span {
@@ -106,5 +166,14 @@
     line-height: 33.6px;
     color: #191919;
     transform: translateY(5px);
-
+    @media screen and (max-width: 1201px) {
+        line-height: 26.4px;
+    }
+    @media screen and (max-width: 768px) {
+        transform: unset;
+    }
+    @media screen and (max-width: 650px) {
+        font-size: 18px;
+        line-height: 21.6px;
+    }
 }

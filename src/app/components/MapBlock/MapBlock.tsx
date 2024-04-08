@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const MapBlock: React.FC = () => {
     return (
-        <div className={styles.block}>
+        <div className={styles.block} id='MapBlock'>
            <div className={styles.content}>
             <div className={styles.background}>
                 <Image src={MapImage} alt="image"/>

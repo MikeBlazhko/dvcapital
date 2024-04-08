@@ -11,7 +11,7 @@ export const FactoringBlock: React.FC = () => {
         'Перечисление фактором оставшихся средств на счет компании после получения оплаты от покупателя'
     ];
     return (
-        <div className={styles.block}>
+        <div className={styles.block} id='FactoringBlock'>
             <div className={styles.background}>
                 <Image src={FactoringImage} alt="image"/>
             </div>

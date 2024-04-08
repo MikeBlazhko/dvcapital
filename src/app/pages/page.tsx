@@ -1,4 +1,5 @@
 'use client';
+
 import { 
   AdvantageBlock, 
   FactoringBlock, 
@@ -9,7 +10,7 @@ import {
   ServicesBlock, 
   StagesBlock, 
   UserBlock
-} from "./components";
+} from "../components";
 
 export default function Home() {
   return (

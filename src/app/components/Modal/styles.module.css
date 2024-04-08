@@ -1,0 +1,135 @@
+.image{
+    min-width: 600px;
+    width: 600px;
+    height: inherit;
+    border-radius: 0 6px 6px 0;
+    overflow: hidden;
+    @media screen and (max-width: 1201px) {
+        min-width: 469px;
+        width: 469px;
+    }
+    @media screen and (max-width: 768px) {
+        min-width: 370px;
+        width: 370px;
+    }
+     @media screen and (max-width: 650px) {
+        display: none;
+    }
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal :global(.ant-modal-content){
+    padding: 0 !important;
+}
+
+.wrapModal :global(.ant-modal){
+    width: 1200px !important;
+}
+
+.block{
+    display: inline-flex;
+}
+
+
+.column{
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @media screen and (max-width: 1201px) {
+        padding-right: 21px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 40px 20px;
+    }
+    @media screen and (max-width: 650px) {
+        padding: 64px 20px 40px;
+    }
+}
+
+.header{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26.4px;
+    color: #191919;
+    margin-bottom: 20px;
+}
+
+.checkboxRow{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkboxRow span{
+    transform: translateY(-1px);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #686868;
+}
+
+.policy{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.closeIcon svg{
+    width: 53px;
+    height: 53px;
+    @media screen and (max-width: 650px) {
+        width: 27px;
+        height: 27px;
+    }
+}
+
+.closeIcon svg path{
+    stroke: #fff !important;
+    @media screen and (max-width: 650px) {
+        stroke: #686868 !important;
+    }
+}
+
+.modal :global(.ant-modal-close){
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    top: 25px;
+    inset-inline-end: 25px;
+    @media screen and (max-width: 650px) {
+        width: 27px;
+        height: 27px;
+        top: 15px;
+        inset-inline-end: 15px;
+    }
+}
+
+.succesColumn{
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.succesColumn svg{
+    margin: 0 auto;
+}
+
+.succesColumn span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26.4px;
+    text-align: left;
+    color: #191919;
+}

@@ -32,7 +32,7 @@ const ExpandedItem: React.FC<PropsWithChildren<Props>> = ({children, title}) => 
 
 export const FaqBlock: React.FC = () => {
     return (
-        <div className={styles.block}>
+        <div className={styles.block} id='FaqBlock'>
             <div className={styles.content}>
                 <div className={styles.header}>Вопрос-ответ</div>
                 <div className={styles.items}>

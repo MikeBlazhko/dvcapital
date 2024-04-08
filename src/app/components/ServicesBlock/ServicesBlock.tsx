@@ -46,7 +46,7 @@ export const ServicesBlock: React.FC = () => {
     ];
 
     return (
-        <div className={styles.block}>
+        <div className={styles.block} id='ServicesBlock'>
             <div className={styles.content}>
                 <div className={styles.header}>Услуги</div>
                 <div className={styles.values}>

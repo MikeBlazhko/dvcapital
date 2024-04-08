@@ -2,7 +2,12 @@
     position: relative;
     min-height: 800px;
     height: 800px;
-    
+    @media screen and (max-width: 768px) {
+        height: 1024px;
+    }
+    @media screen and (max-width: 650px) {
+        height: 100vh;
+    }
 }
 
 .background{
@@ -11,13 +16,16 @@
     top: 0;
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 100vw;
 }
 
 .background img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @media screen and (max-width: 768px) {
+        object-position: 100% 50%;
+    }
 }
 
 .content{
@@ -25,6 +33,13 @@
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 25px;
+    @media screen and (max-width: 1201px) {
+        padding: 25px 27px 0;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 25px 14px 0;
+        padding-right: 18px;
+    }
 }
 
 .row{
@@ -34,11 +49,24 @@
     justify-content: space-between;
 }
 
+.row svg{
+     @media screen and (max-width: 650px) {
+        width: 160px;
+        height: 65px;
+        padding-left: 4px;
+    }
+}
+
 .menu{
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 46px;
+    @media screen and (max-width: 768px) {
+        gap: 20px;
+    }
 }
+
 
 .button{
     font-family: 'Montserrat', sans-serif;
@@ -47,10 +75,13 @@
     line-height: 21px;
     color: #FFFFFF;
     cursor: pointer;
+    @media screen and (max-width: 1201px) {
+        display: none;
+    }
 }
 
 .button:hover{
-    border-bottom: 3px solid #FFFFFF;
+    color: #3A7DFF;
 }
 
 .colorButton{
@@ -79,6 +110,20 @@
     white-space: pre-line;
     letter-spacing: 4.3px;
     color: #FFFFFF;
+    @media screen and (max-width: 1201px) {
+        line-height: 72px;
+        letter-spacing: unset;
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: 226px;
+        margin-right: 120px;
+        white-space: unset;
+    }
+    @media screen and (max-width: 650px) {
+        margin-top: 205px;
+        font-size: 30px;
+        line-height: 36px;
+    }
 }
 
 .subText{
@@ -90,4 +135,109 @@
     white-space: pre-line;
     letter-spacing: 1.7px;
     color: #FFFFFF;
+    @media screen and (max-width: 768px) {
+        margin-top: 11px;
+    }
+    @media screen and (max-width: 650px) {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.6px;
+        white-space: unset;
+    }
+}
+
+.bigButton{
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.smallButton{
+    padding: 10px;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.smallButton svg{
+    width: 30px;
+    height: 30px;
+}
+
+.smallButton svg path{
+    stroke: #fff;
+}
+
+.menuIcon{
+    transform: translateY(1px);
+    @media screen and (min-width: 1201px) {
+        display: none;
+    }
+}
+
+.menuIcon svg{
+    width: 32px;
+    height: 32px;
+}
+
+.menuIcon svg path:hover{
+    color:#2a61d0;
+}
+
+
+.drawerMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.drawwerButton{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 43.88px;
+    color: #191919;
+    cursor: pointer;
+    @media screen and (max-width: 768px) {
+        font-size: 22px;
+        line-height: 26.82px;
+    }
+}
+
+.drawwerButton:hover{
+    color:#2a61d0;
+}
+
+.drawer{
+    width: 100vw !important;
+    min-width: 100vw !important;
+    background: #f1f1f1d5 !important;
+}
+
+.rootDrawer{
+    width: 100vw;
+}
+
+
+.drawer  :global(.ant-drawer-header){
+    border-bottom: unset;
+    justify-content: flex-end;
+    padding-top: 54px;
+    padding-right: 25px;
+    padding-bottom: 65px;
+    @media screen and (max-width: 768px) {
+        padding-top: 44px;
+        padding-right: 14px;
+        padding-bottom: 20px;
+    }
+}
+
+.drawer  :global(.ant-drawer-header-title){
+    border-bottom: unset;
+    justify-content: flex-end;
+}
+
+.drawerIcon svg{
+    width: 30px !important;
+    height: 30px !important;
 }

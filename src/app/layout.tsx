@@ -12,9 +12,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="ru">
-      <body >{children}</body>
+      <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
+      <body ><main>{children}</main></body>
     </html>
   );
 }
