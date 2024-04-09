@@ -64,7 +64,7 @@ export const FooterBlock: React.FC = () => {
                         </Link>
                     </div>
                     <div className={styles.footerLinks}>
-                        <a href={`${process.env.NEXT_PUBLIC_HOST}/policy.pdf`} target="_blank">
+                        <a href={`${process.env.NEXT_PUBLIC_HOST}/policy.pdf`} target="_blank" rel="noreferrer">
                             <span className={styles.link}>Политика конфиденциальности</span>
                         </a>
                         <span>© Все права защищены</span>

@@ -65,7 +65,9 @@ export const UserBlock: React.FC = () => {
                             <Checkbox value={checked} onChange={(e) => setChecked(e)}/>
                             <div>
                                 <span>Я согласен с </span>
-                                <span className={styles.policy}>политикой конфиденциальности</span>
+                                <a href={`${process.env.NEXT_PUBLIC_HOST}/policy.pdf`} target="_blank" rel="noreferrer">
+                                    <span className={styles.policy}>политикой конфиденциальности</span>
+                                </a>
                             </div>
                         </div>
                     </div>
