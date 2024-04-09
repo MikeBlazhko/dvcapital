@@ -13,28 +13,32 @@ import { ModalCheckIcon } from "@/assets/icons/modal-check-icon";
 interface Props {
     open: boolean;
     onClose: ()=> void;
+    defaultSuccess?: boolean;
 
 }
 
-export const Modal: React.FC<Props> = ({open, onClose}) => {
+export const Modal: React.FC<Props> = ({open, onClose, defaultSuccess=false}) => {
    const [name, setName] = useState('');
    const [phone, setPhone] = useState('');
    const [checked, setChecked] = useState(false);
-   const [success, setSuccess] = useState(false);
+   const [success, setSuccess] = useState(defaultSuccess);
+   
 
    const sendForm =() =>  {
-    return fetch('http://dvcapital.ru/mail.php', {
-        method: 'POST',
-        headers: {
-            "Content-type": "application/json",
-            "Accept": "application/json"
-        },
-        body: JSON.stringify({name, phone})
-    })
-    .then(response => response.json())
-    .then(body => console.log(body))
-    .catch(error => console.error('Error:', error));
-}
+        return fetch('http://dvcapital.ru/mail.php', {
+            method: 'POST',
+            headers: {
+                "Content-type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({name, phone})
+        })
+        .then(response => response.json())
+        .then(() => {
+            setSuccess(true);
+        })
+        .catch(error => console.error('Error:', error));
+    }
 
     return (
         <AntModal 
@@ -74,7 +78,7 @@ export const Modal: React.FC<Props> = ({open, onClose}) => {
                             </div>
                         </div>
                         <Button 
-                        disabled={!checked || name.trim().length === 0 || phone.replace("_", '').trim().length !== 18}
+                        disabled={!checked || name.trim().length === 0 || phone.replace("_", '').trim().length !== 18 }
                             onClick={sendForm} 
                             >
                             Связаться

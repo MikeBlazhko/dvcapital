@@ -15,6 +15,7 @@ import { LockIcon } from "@/assets/icons/lock-icon";
 import { ArrowIcon } from "@/assets/icons/arrow-icon";
 import { classNames } from "@/utils";
 import FormItem from "antd/es/form/FormItem";
+import { useInView } from "react-intersection-observer";
 
 export const ProfileBlock: React.FC = () => {
     const [drawer, setDrawer] = useState(false);
@@ -22,6 +23,7 @@ export const ProfileBlock: React.FC = () => {
     const [login, setLogin] = useState(false);
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
+    const [ref, inView] = useInView({ threshold: 0.2 });
 
     const onScrollToBlock = (id: string) => {
         const element = document.getElementById(id);
@@ -105,7 +107,9 @@ export const ProfileBlock: React.FC = () => {
                         <span>Назад</span>
                     </div>
                 </Link>
-                <div className={styles.form}>
+                <div ref={ref}  className={classNames(styles.form, 
+                    //@ts-ignore
+                    inView && styles.fade)}>
                     <div className={styles.formHeader}>
                         Вход в личный кабинет
                     </div>

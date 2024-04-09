@@ -19,7 +19,8 @@ interface Props {
 export const Input: React.FC<Props> = (props) => {
     const {placeholder, before, withMask, value, onChange, name, type, white, className, readOnly} = props;
 
-      const handleChange =(e: any)=> {
+
+    const handleChange =(e: any)=> {
         if (onChange){
             onChange(e.target.value);
         }
@@ -31,11 +32,20 @@ export const Input: React.FC<Props> = (props) => {
         <div className={classNames(styles.input, white && styles.white, className)} id={name} >
             <>{before}</>
             {withMask ? 
-            (<InputMask mask={"+9 (999) 999-99-99"} id={name} name={name} type={type}
+            (<InputMask 
+                mask={"+9 (999) 999-99-99"} 
+                id={name} 
+                name={name} 
+                type={type}
                 value={value} 
                 readOnly={readOnly}
                 onChange={handleChange} >
-                <input name={name} id={name} type={type} placeholder={placeholder} />
+                <input 
+                    name={name}
+                    id={name} 
+                    autoComplete="true" 
+                    type={type} 
+                    placeholder={placeholder} />
             </InputMask>)
             : (
                 <input 

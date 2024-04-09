@@ -35,13 +35,13 @@
     display: flex;
     flex-direction: column;
     gap: 56px;
-    @media screen and (max-width: 1201px) {
+    @media (max-width: 1201px) {
      padding: 120px 27px 113px;   
     }
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
         padding: 100px 14px 90px;
     }
-    @media screen and (max-width: 650px) {
+    @media (max-width: 650px) {
         padding: 80px 14px 75px;
         gap: 57px;
     }
@@ -54,14 +54,14 @@
     position: absolute;
     right: 0;
     top: 120px;
-    @media screen and (max-width: 1201px) {
+    @media (max-width: 1201px) {
         top: 17px;
         right: 30px;
     }
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
         top: 0;
     }
-    @media screen and (max-width: 650px) {
+    @media (max-width: 650px) {
         top: 70px;
     }
     z-index: -1;
@@ -72,10 +72,10 @@
     height: 665px;
     opacity: 0.4;
     object-fit: contain;
-    @media screen and (max-width: 1201px) {
+    @media (max-width: 1201px) {
         width: 506.75px;
     }
-    @media screen and (max-width: 650px) {
+    @media (max-width: 650px) {
         max-width: 340px;
         height: 447px;
         gap: 0px;
@@ -94,7 +94,7 @@
     font-weight: 500;
     line-height: 43.88px;
     color: #191919;
-    @media screen and (max-width: 650px) {
+    @media (max-width: 650px) {
         font-size: 22px;
         line-height: 26.82px;
     }
@@ -117,10 +117,10 @@
     display: flex;
     flex-direction: row;
     gap: 90px;
-    @media screen and (max-width: 1201px) {
+    @media (max-width: 1201px) {
         gap: 40px;
     }
-    @media screen and (max-width: 650px) {
+    @media (max-width: 650px) {
         flex-direction: column;
         gap: 35px;
 
@@ -139,10 +139,10 @@
     flex-direction: column;
     gap: 10px;
     max-width: 510px;
-    @media screen and (max-width: 1201px) {
+    @media (max-width: 1201px) {
         max-width: 449px;
     }
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
         max-width: 350px;
     }
 }
@@ -162,10 +162,10 @@
     line-height: 26.4px;
     color: #191919;
     /* letter-spacing: 1.5px;
-     @media screen and (max-width: 1201px) {
+     @media (max-width: 1201px) {
         letter-spacing: 1.7px;
     } */
-    @media screen and (max-width: 650px) {
+    @media (max-width: 650px) {
         font-size: 18px;
         line-height: 21.6px;
     }
