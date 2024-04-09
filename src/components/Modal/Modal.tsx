@@ -5,7 +5,7 @@ import Image from "next/image";
 import  ModalImage from "@/assets/images/modal.png";
 import { UserIcon } from "@/assets/icons/user-icon";
 import { PhoneIcon } from "@/assets/icons/phone-icon";
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import { Button, Checkbox, Input } from "@/atoms";
 import { useForm, useWatch } from "antd/es/form/Form";
 import FormItem from "antd/es/form/FormItem";

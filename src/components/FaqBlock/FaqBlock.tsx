@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React, { PropsWithChildren, useState } from "react";
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import { classNames } from "@/utils";
 import { ArrowIcon } from "@/assets/icons/arrow-icon";
 

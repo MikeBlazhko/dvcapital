@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import MapImage from "@/assets/images/map.png";
 import Image from "next/image";
 import { useInView } from 'react-intersection-observer';

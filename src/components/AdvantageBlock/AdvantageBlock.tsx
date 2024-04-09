@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Image from "next/image";
 import UserImage from "@/assets/images/user.jpeg";
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import { LikeIcon } from "@/assets/icons/like-icon";
 import { PlusIcon } from "@/assets/icons/plus-icon";
 import { FileIcon } from "@/assets/icons/file-icon";

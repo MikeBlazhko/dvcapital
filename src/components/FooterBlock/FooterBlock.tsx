@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import { Button } from "@/atoms";
 import { PhoneIcon } from "@/assets/icons/phone-icon";
 import { AtSignIcon } from "@/assets/icons/at-sign-icon";

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import { classNames } from "@/utils";
 import { FirstStageIcon } from "@/assets/icons/stage1";
 import { StageSecondIcon } from "@/assets/icons/stage2";

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Image from "next/image";
 import UserImage from "@/assets/images/user2.png";
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import { Button, Checkbox, Input } from "@/atoms";
 import { UserIcon } from "@/assets/icons/user-icon";
 import { PhoneIcon } from "@/assets/icons/phone-icon";

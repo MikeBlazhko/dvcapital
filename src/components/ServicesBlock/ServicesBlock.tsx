@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import ServiceOneImage from "@/assets/images/services1.jpeg";
 import ServiceTwoImage from "@/assets/images/services2.jpeg";
 import ServiceThreeImage from "@/assets/images/services3.jpeg";
