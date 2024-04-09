@@ -107,11 +107,11 @@
     font-weight: 500;
     line-height: 70px;
     white-space: pre-line;
-    letter-spacing: 4.3px;
+    /* letter-spacing: 4.3px; */
     color: #FFFFFF;
     @media screen and (max-width: 1201px) {
         line-height: 72px;
-        letter-spacing: unset;
+        /* letter-spacing: unset; */
     }
     @media screen and (max-width: 768px) {
         margin-top: 226px;
@@ -132,7 +132,7 @@
     font-weight: 500;
     line-height: 26.4px;
     white-space: pre-line;
-    letter-spacing: 1.7px;
+    /* letter-spacing: 1.7px; */
     color: #FFFFFF;
     @media screen and (max-width: 768px) {
         margin-top: 11px;
@@ -210,7 +210,7 @@
 .drawer{
     width: 100vw !important;
     min-width: 100vw !important;
-    background: #f1f1f1d5 !important;
+    background: #f1f1f1dd !important;
 }
 
 .rootDrawer{

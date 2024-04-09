@@ -47,7 +47,9 @@ export const ProfileBlock: React.FC = () => {
             </div>
             <div className={styles.content}>
                 <div className={styles.row}>
-                    <LogoIcon/>
+                   <Link href={'/'}>
+                        <LogoIcon/>
+                    </Link>
                     <div className={styles.menu}>
                         <Link href={'/'}>
                             <div 
@@ -60,7 +62,7 @@ export const ProfileBlock: React.FC = () => {
                         <Link href={'/'}>
                             <div 
                                 className={styles.button} 
-                                onClick={() => onScrollToBlock('MapBlock')}>
+                                onClick={() => onScrollToBlock('ServicesBlock')}>
                                 Услуги
                             </div>
                         </Link>

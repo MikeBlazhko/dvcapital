@@ -90,7 +90,7 @@
     font-weight: 500;
     line-height: 26.4px;
     color: #FFFFFF;
-    letter-spacing: 1.5px;
+    /* letter-spacing: 1.5px; */
     @media screen and (max-width: 768px) {
         font-size: 18px;
         line-height: 21.6px;
@@ -103,7 +103,7 @@
     font-weight: 600;
     line-height: 21px;
     color: #FFFFFF;
-    letter-spacing: 0.6px;
+    /* letter-spacing: 0.6px; */
   
 }
 

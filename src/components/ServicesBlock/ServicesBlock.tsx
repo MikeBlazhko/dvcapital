@@ -45,13 +45,16 @@ export const ServicesBlock: React.FC = () => {
 
     ];
 
+
     return (
-        <div className={styles.block} id='ServicesBlock'>
+            <div className={styles.block} id='ServicesBlock'>
             <div className={styles.content}>
                 <div className={styles.header}>Услуги</div>
-                <div className={styles.values}>
+                 
+                <div className={styles.values} >
+                   
                     {values.map((val) => (
-                        <div key={val.title} className={styles.value}>
+                            <div key={val.title} className={styles.value}>
                             <div className={styles.valueImage}>
                                 <Image src={val.image} alt={val.title} />
                             </div>
@@ -60,7 +63,8 @@ export const ServicesBlock: React.FC = () => {
                                 <CollapsedText text={val.text}/>
                            </div>
                         </div>
-                    ))}    
+                    ))}   
+                    
                 </div>        
             </div>
         </div>

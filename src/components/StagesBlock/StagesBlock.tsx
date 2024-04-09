@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from './styles.module.css';
 import { classNames } from "@/utils";
 import { FirstStageIcon } from "@/assets/icons/stage1";
@@ -31,7 +31,23 @@ export const StagesBlock: React.FC = () => {
         },
     ];
 
+
+
     const [activeValue, setActiveValue] = useState(values[0]);
+    const [debounceValue, setDebounceValue] =useState(activeValue);
+    const [animate, setAnimate] = useState(false);
+
+    useEffect(() => {
+        if (animate){
+            setTimeout(() => {
+                setDebounceValue(activeValue);
+                setAnimate(false);
+            }, 200)
+        }
+
+    }, [animate]);
+
+
     return (
         <div className={styles.block} id='StagesBlock'>
             <div className={styles.content}>
@@ -41,7 +57,11 @@ export const StagesBlock: React.FC = () => {
                     {values.map((val, index) => (
                         // @ts-ignore
                         <div key={index} className={classNames(styles.value,activeValue.text === val.text && styles.activeValue )} 
-                            onClick={() => setActiveValue(val)}>
+                            onClick={() => {
+                                setAnimate(true);
+                                setActiveValue(val);
+
+                            }}>
                             <span>0{index + 1}</span>
                             <div className={styles.radio}>
                             {activeValue.text === val.text && (<div className={styles.center}/>)}
@@ -49,9 +69,12 @@ export const StagesBlock: React.FC = () => {
                         </div>
                     ))}
                 </div>
-                <div className={styles.rowValue}>
-                    <div className={styles.icon}>{activeValue.icon}</div>
-                    <span>{activeValue.text}</span>
+                
+                <div className={classNames(styles.rowValue, 
+                    // @ts-ignore
+                    animate && styles.animate)}>
+                    <div className={styles.icon}>{debounceValue.icon}</div>
+                    <span>{debounceValue.text}</span>
                 </div>
             </div>
         </div>

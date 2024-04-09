@@ -4,6 +4,7 @@ import { Button } from "@/atoms";
 import { PhoneIcon } from "@/assets/icons/phone-icon";
 import { AtSignIcon } from "@/assets/icons/at-sign-icon";
 import { Modal } from "../Modal";
+import Link from "next/link";
 
 export const FooterBlock: React.FC = () => {
     const [modal, setModal] = useState(false);
@@ -54,11 +55,13 @@ export const FooterBlock: React.FC = () => {
                 <div className={styles.footer}>
                     <div className={styles.buttons}>
                         <span onClick={() => onScrollToBlock('MapBlock')}>О компании</span>
-                        <span onClick={() => onScrollToBlock('MapBlock')}>Услуги</span>
+                        <span onClick={() => onScrollToBlock('ServicesBlock')}>Услуги</span>
                         <span onClick={() => onScrollToBlock('StagesBlock')}>Этапы работы</span>
                         <span onClick={() => onScrollToBlock('FaqBlock')}>FAQ</span>
                         <span>Контакты</span>
-                        <span>Личный кабинет</span>
+                        <Link href="/profile">
+                            <span>Личный кабинет</span>
+                        </Link>
                     </div>
                     <div className={styles.footerLinks}>
                         <span className={styles.link}>Политика конфиденциальности</span>

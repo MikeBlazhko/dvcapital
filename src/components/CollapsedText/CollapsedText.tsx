@@ -10,6 +10,7 @@ interface Props {
 
 export const CollapsedText: React.FC<Props> = (props) => {
   const { text } = props;
+  const [available, setAbailable] = useState(true);
   const [expanded, setExpanded] = useState(false);
   const ref = useRef<HTMLDivElement>();
   const [show, setShow] = useState(false);
@@ -18,6 +19,7 @@ export const CollapsedText: React.FC<Props> = (props) => {
     // @ts-ignore
     if (ref.current.offsetHeight <= 57) {
       setExpanded(true);
+      setAbailable(false);
     }
     setShow(true);
   }, []);
@@ -37,12 +39,14 @@ export const CollapsedText: React.FC<Props> = (props) => {
         className={styles.blockDescription}
         dangerouslySetInnerHTML={{ __html: text }}
       />
-      {!expanded && (
-        <div className={styles.blockMore} onClick={() => setExpanded(true)}>
-         <span>Развернуть</span>
+      {/* {!expanded && ( */}
+        <div className={classNames(styles.blockMore, 
+          // @ts-ignore
+          expanded && styles.expanded)} onClick={() => setExpanded(!expanded)}>
+         <span>{expanded ? 'Свернуть' : 'Развернуть'}</span>
          <ArrowIcon/>
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 };

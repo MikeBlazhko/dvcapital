@@ -1,20 +1,42 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
 import styles from './styles.module.css';
 import MapImage from "@/assets/images/map.png";
 import Image from "next/image";
+import { useInView } from 'react-intersection-observer';
+import { classNames } from "@/utils";
+
 
 export const MapBlock: React.FC = () => {
+    const [ref, inView] = useInView({ threshold: 0.2 });
+    const [textRef, textInView] = useInView({ threshold: 0.2 });
+
     return (
-        <div className={styles.block} id='MapBlock'>
-           <div className={styles.content}>
+        
+        <div className={styles.block} id='MapBlock' >
+          
+           <div 
+           className={classNames(
+           styles.mapContent)}>
             <div className={styles.background}>
                 <Image src={MapImage} alt="image"/>
             </div>
-            <div className={styles.mainText}>
+            <div 
+                ref={ref}
+                className={classNames(
+                styles.mainText, 
+                // @ts-ignore
+                inView && styles.fade
+            )}>
                 <span>Основным нашим направлением является оказание факторинговых услуг, преимущественно </span>
                 <span className={styles.blueText}>российским дальневосточным торговым и производственным компаниям.</span>
             </div>
-            <div className={styles.row}>
+            <div 
+                ref={textRef} 
+                className={classNames(styles.row, 
+                     // @ts-ignore
+                inView && styles.fade
+                )}>
                 <div className={styles.column}>
                     <div className={styles.columnTitle}>01</div>
                     <div className={styles.columnValue}>

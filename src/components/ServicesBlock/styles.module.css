@@ -67,6 +67,8 @@
     object-fit: cover;
     filter: brightness(55%);
 
+    
+
 }
 
 .valueContent{
@@ -82,10 +84,8 @@
     font-weight: 500;
     line-height: 43.88px;
     color: #FFFFFF;
-    letter-spacing: 2.7px;
     @media screen and (max-width: 650px) {
         font-size: 22px;
         line-height: 26.82px;
-        letter-spacing: 2.2px;
     }
 }

@@ -8,13 +8,22 @@ import { PlusIcon } from "@/assets/icons/plus-icon";
 import { FileIcon } from "@/assets/icons/file-icon";
 import { Button } from "@/atoms";
 import { Modal } from "../Modal";
+import { useInView } from "react-intersection-observer";
+import { classNames } from "@/utils";
 
 export const AdvantageBlock: React.FC = () => {
     const [modal, setModal] = useState(false);
+    const [ref, inView] = useInView({ threshold: 0.2 })
+    const [imageRef, imageInView] = useInView({ threshold: 0.2 })
     return (
-        <div className={styles.block} id='AdvantageBlock'>
-            <div className={styles.content}>
-                <div className={styles.column}>
+        <div className={styles.block} id='AdvantageBlock' >
+            <div className={classNames(
+                styles.content)}>
+                <div 
+                    ref={ref} 
+                    className={classNames(styles.column, 
+                    // @ts-ignore
+                    inView && styles.fade)}>
                     <div className={styles.header}>Наши преимущества</div>
                     <div className={styles.smallImage}>
                         <Image src={UserImage} alt={""}/>
@@ -35,7 +44,11 @@ export const AdvantageBlock: React.FC = () => {
                     </div>
                     <Button flex className={styles.button} onClick={() => setModal(true)}>Связаться</Button>
                 </div>
-                <div className={styles.image}>
+                <div 
+                    ref={imageRef} 
+                    className={classNames(styles.image, 
+                    // @ts-ignore
+                    imageInView && styles.fade)}>
                     <Image src={UserImage} alt={""}/>
                 </div>
             </div>

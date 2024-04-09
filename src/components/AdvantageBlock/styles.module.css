@@ -2,6 +2,26 @@
     background: #FFFFFF;
 }
 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .content{
     max-width: 1200px;
     margin: 120px auto;
@@ -29,13 +49,14 @@
 }
 
 
+
 .header{
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: 500;
     line-height: 43.88px;
     color: #191919;
-    letter-spacing: 3.2px;
+    /* letter-spacing: 3.2px; */
     @media screen and (max-width: 768px) {
         text-align: center;
     }
@@ -64,6 +85,7 @@
 }
 
 .image{
+    opacity: 0;
     min-width: 532px;
     width: 532px;
     height: 660px;
@@ -75,6 +97,12 @@
     @media screen and (max-width: 768px) {
         display: none;
     }
+}
+
+.image.fade{
+    animation: fadeOpacity ease 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .image img {
@@ -92,6 +120,7 @@
 }
 
 .column{
+    opacity: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -100,6 +129,13 @@
         min-width: 100%;
     }
 }
+
+.column.fade{
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 
 .values{
     margin-top: 60px;
@@ -151,10 +187,10 @@
     font-weight: 500;
     line-height: 26.4px;
     color: #191919;
-    letter-spacing: 1.6px;
-    @media screen and (max-width: 1201px) {
+    /* letter-spacing: 1.6px; */
+    /* @media screen and (max-width: 1201px) {
         letter-spacing: 1.4px;
-    }
+    } */
     @media screen and (max-width: 650px) {
         font-size: 18px;
         line-height: 21.6px;

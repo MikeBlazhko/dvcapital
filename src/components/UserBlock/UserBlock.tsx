@@ -6,15 +6,21 @@ import styles from './styles.module.css';
 import { Button, Checkbox, Input } from "@/atoms";
 import { UserIcon } from "@/assets/icons/user-icon";
 import { PhoneIcon } from "@/assets/icons/phone-icon";
+import { useInView } from "react-intersection-observer";
+import { classNames } from "@/utils";
 
 export const UserBlock: React.FC = () => {
-    const [name, setName] = useState('');
+const [name, setName] = useState('');
    const [phone, setPhone] = useState('');
    const [checked, setChecked] = useState(false);
+   const [ref, inView] = useInView({ threshold: 0.2 });
    
     return (
         <div className={styles.block} id='UserBlock'>
-            <div className={styles.content}>
+            <div ref={ref} className={classNames(styles.content, 
+                //@ts-ignore
+                inView && styles.fade
+            )}>
                 <div className={styles.column}>
                     <div className={styles.header}>Ответим на все ваши вопросы и подберем нужный вид факторинга для вашей компании</div>
                     <div className={styles.smallImage}>

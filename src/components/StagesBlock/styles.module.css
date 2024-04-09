@@ -24,6 +24,10 @@
     font-weight: 500;
     line-height: 43.88px;
     color: #191919;
+    @media screen and (max-width: 650px) {
+        font-size: 22px;
+        line-height: 26.82px;
+    }
 }
 
 .divider{
@@ -37,7 +41,7 @@
         top: 284px;
     }
      @media screen and (max-width: 650px) {
-        top: 226px;
+        top: 210px;
     }
 }
 
@@ -69,6 +73,7 @@
 }
 
 .value span{
+    
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: 500;
@@ -110,21 +115,49 @@
     background: #3A7DFF;
 }
 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes inFadeInAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 
 .rowValue{
     margin-top: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     gap: 105px;
     @media screen and (max-width: 1201px) {
         gap: 40px;
     }
     @media screen and (max-width: 650px) {
         flex-direction: column;
+        align-items: unset;
         gap: 20px;
     }
+    animation: fadeInAnimation ease 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.rowValue.animate{
+    animation: inFadeInAnimation ease 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .icon{

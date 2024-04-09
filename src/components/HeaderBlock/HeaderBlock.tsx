@@ -10,8 +10,12 @@ import { Drawer } from "antd";
 import { XCircleIcon } from "@/assets/icons/x-circle-icon";
 import { Modal } from "../Modal";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
+import { classNames } from "@/utils";
 
 export const HeaderBlock: React.FC = () => {
+    const [mainTextRef, mainTextiInView] = useInView({ threshold: 0.2 })
+    const [ref, inView] = useInView({ threshold: 0.2 })
     const [drawer, setDrawer] = useState(false);
     const [modal, setModal] = useState(false);
     const onScrollToBlock = (id: string) => {
@@ -39,7 +43,7 @@ export const HeaderBlock: React.FC = () => {
                         </div>
                         <div 
                             className={styles.button} 
-                            onClick={() => onScrollToBlock('MapBlock')}>
+                            onClick={() => onScrollToBlock('ServicesBlock')}>
                             Услуги</div>
                         <div 
                             className={styles.button}
@@ -68,10 +72,19 @@ export const HeaderBlock: React.FC = () => {
                        </div>
                     </div>
                 </div>
-                <div className={styles.mainText}>
+                <div ref={mainTextRef} 
+                    className={classNames(
+                    styles.mainText, 
+                    // @ts-ignore
+                    mainTextiInView && styles.mainTextFade)}>
                     {"Факторинговые услуги\nдля дальневосточных\nкомпаний"}
                 </div>
-                <div className={styles.subText}>
+                <div 
+                    ref={ref} 
+                    className={classNames(
+                        styles.subText,
+                        // @ts-ignore
+                        inView && styles.subTextFade)}>
                     {"Помогаем компаниям управлять своими\nфинансами и снижать риски"}
                 </div>
             </div>

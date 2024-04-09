@@ -21,7 +21,11 @@ const ExpandedItem: React.FC<PropsWithChildren<Props>> = ({children, title}) => 
             >
             <div className={styles.column}>
                 <div className={styles.columnTitle}>{title}</div>
-                <span>{children}</span>
+                <div className={classNames(
+                    styles.text ,
+                    `${open && styles.activeText}`)}>
+                        <span>{children}</span>
+               </div>
             </div>
             <div className={classNames(styles.icon, `${open && styles.activeIcon}`)}>
                 <ArrowIcon/>
