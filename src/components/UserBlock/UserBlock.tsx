@@ -15,7 +15,6 @@ export const UserBlock: React.FC = () => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [checked, setChecked] = useState(false);
-    const [disabled, setDisabled] = useState(false);
     const [ref, inView] = useInView({ threshold: 0.2 , triggerOnce: true});
 
     const sendForm =() =>  {
@@ -29,21 +28,14 @@ export const UserBlock: React.FC = () => {
         })
         .then(response => response.json())
         .then(body => {
-            console.log(body);
+            setPhone('');
+            setName('');
+            setChecked(false);
             setModal(true);
-            setDisabled(true);
         })
         .catch(error => console.error('Error:', error));
     }
 
-    useEffect(() => {
-        if (disabled){
-            setPhone('');
-            setName('');
-            setChecked(false);
-            setDisabled(false);
-        }
-    }, [name, phone]);
    
     return (
         <div className={styles.block} id='UserBlock'>
@@ -74,7 +66,7 @@ export const UserBlock: React.FC = () => {
                     <Button 
                         flex
                         onClick={() =>sendForm()}
-                        disabled={!checked || name.trim().length === 0 || phone.replace("_", '').trim().length !== 18 || disabled}
+                        disabled={!checked || name.trim().length === 0 || phone.replace("_", '').trim().length !== 18}
                     >Связаться</Button>
                 </div>
                 <div className={styles.image}>

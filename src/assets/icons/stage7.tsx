@@ -2,7 +2,7 @@ import React from "react";
 
 export const StageSevenIcon = () => {
     return (
-        <svg width="163" height="160" viewBox="0 0 163 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 163 160" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_259_313)">
         <g filter="url(#filter0_d_259_313)">
         <circle cx="79" cy="79" r="66" fill="white"/>

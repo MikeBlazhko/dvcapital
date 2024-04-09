@@ -22,6 +22,12 @@ export const Modal: React.FC<Props> = ({open, onClose, defaultSuccess=false}) =>
    const [phone, setPhone] = useState('');
    const [checked, setChecked] = useState(false);
    const [success, setSuccess] = useState(defaultSuccess);
+
+   useEffect(() => {
+    setName('');
+    setPhone('');
+    setChecked(false);
+   }, []);
    
 
    const sendForm =() =>  {

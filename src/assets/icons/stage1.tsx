@@ -2,7 +2,7 @@ import React from 'react'
 
 export const FirstStageIcon  = () => {
     return (
-        <svg width="230" height="163" viewBox="0 0 230 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 230 163" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_84_830)">
         <g filter="url(#filter0_d_84_830)">
         <path d="M172.083 23.584H125.75C122.678 23.584 119.732 24.8044 117.559 26.9767C115.387 29.149 114.167 32.0952 114.167 35.1673V127.834C114.167 130.906 115.387 133.852 117.559 136.025C119.732 138.197 122.678 139.417 125.75 139.417H195.25C198.322 139.417 201.268 138.197 203.441 136.025C205.613 133.852 206.833 130.906 206.833 127.834V58.334L172.083 23.584Z" fill="white"/>

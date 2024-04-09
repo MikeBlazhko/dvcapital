@@ -112,14 +112,16 @@
 }
 
 .succesColumn{
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 170px 40px 171px;
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-content: center;
     gap: 40px;
-     @media (max-width: 650px) {
+    @media (max-width: 768px) {
+        padding: 174px 20px;
+    }
+    @media (max-width: 650px) {
         padding: 40px 20px;
         
     }

@@ -2,7 +2,7 @@ import React from "react";
 
 export const StageSecondIcon = () => {
 return (
-        <svg width="163" height="163" viewBox="0 0 163 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 163 163" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_168_159)">
         <g filter="url(#filter1_d_168_159)">
         <path d="M81.5 135.833V67.9165" stroke="#3A7DFF" strokeWidth="10.1875" strokeLinecap="round" strokeLinejoin="round"/>

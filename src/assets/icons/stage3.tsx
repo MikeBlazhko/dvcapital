@@ -2,7 +2,7 @@ import React from "react";
 
 export const StageThreeIcon = () => {
     return (
-        <svg width="163" height="155" viewBox="0 0 163 155" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 163 155" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_168_205)">
         <g filter="url(#filter0_d_168_205)">
         <path d="M128.252 44.5801H25.2713C18.1619 44.5801 12.3987 50.3433 12.3987 57.4527V121.816C12.3987 128.925 18.1619 134.688 25.2713 134.688H128.252C135.361 134.688 141.124 128.925 141.124 121.816V57.4527C141.124 50.3433 135.361 44.5801 128.252 44.5801Z" fill="white"/>
