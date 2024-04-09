@@ -19,7 +19,7 @@ export const UserBlock: React.FC = () => {
     const [ref, inView] = useInView({ threshold: 0.2 , triggerOnce: true});
 
     const sendForm =() =>  {
-        return fetch('http://dvcapital.ru/mail.php', {
+        return fetch(`${process.env.NEXT_PUBLIC_HOST}/mail.php`, {
             method: 'POST',
             headers: {
                 "Content-type": "application/json",

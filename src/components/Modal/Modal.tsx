@@ -25,7 +25,7 @@ export const Modal: React.FC<Props> = ({open, onClose, defaultSuccess=false}) =>
    
 
    const sendForm =() =>  {
-        return fetch('http://dvcapital.ru/mail.php', {
+        return fetch(`${process.env.NEXT_PUBLIC_HOST}/mail.php`, {
             method: 'POST',
             headers: {
                 "Content-type": "application/json",
