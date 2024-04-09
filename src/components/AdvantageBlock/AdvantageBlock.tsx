@@ -13,8 +13,8 @@ import { classNames } from "@/utils";
 
 export const AdvantageBlock: React.FC = () => {
     const [modal, setModal] = useState(false);
-    const [ref, inView] = useInView({ threshold: 0.2 })
-    const [imageRef, imageInView] = useInView({ threshold: 0.2 })
+    const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
+    const [imageRef, imageInView] = useInView({ threshold: 0.2, triggerOnce: true })
     return (
         <div className={styles.block} id='AdvantageBlock' >
             <div className={classNames(

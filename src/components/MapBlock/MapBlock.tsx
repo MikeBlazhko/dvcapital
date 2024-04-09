@@ -8,8 +8,8 @@ import { classNames } from "@/utils";
 
 
 export const MapBlock: React.FC = () => {
-    const [ref, inView] = useInView({ threshold: 0.2 });
-    const [textRef, textInView] = useInView({ threshold: 0.2 });
+    const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+    const [textRef, textInView] = useInView({ threshold: 0.2, triggerOnce: true });
 
     return (
         
@@ -46,7 +46,7 @@ export const MapBlock: React.FC = () => {
                 <div className={styles.column}>
                     <div className={styles.columnTitle}>02</div>
                     <div className={styles.columnValue}>
-                        В нашей команде работают специалисты своего дела, которые ответят на все ваши вопросы и помогут с заполнением документов.
+                        В нашей команде работают специалисты в области факторинга, которые ответят на все ваши вопросы и помогут с заполнением документов.
                     </div>
                 </div>
             </div>

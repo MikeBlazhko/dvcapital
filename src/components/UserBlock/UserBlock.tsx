@@ -16,7 +16,7 @@ export const UserBlock: React.FC = () => {
     const [phone, setPhone] = useState('');
     const [checked, setChecked] = useState(false);
     const [disabled, setDisabled] = useState(false);
-    const [ref, inView] = useInView({ threshold: 0.2 });
+    const [ref, inView] = useInView({ threshold: 0.2 , triggerOnce: true});
 
     const sendForm =() =>  {
         return fetch('http://dvcapital.ru/mail.php', {

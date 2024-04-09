@@ -6,9 +6,9 @@ import { useInView } from "react-intersection-observer";
 import { classNames } from "@/utils";
 
 export const FactoringBlock: React.FC = () => {
-    const [titleRef, titleInView] = useInView({ threshold: 0.2 });
-    const [textRef, textInView] = useInView({ threshold: 0.2 });
-    const [ref, inView] = useInView({ threshold: 0.2 });
+    const [titleRef, titleInView] = useInView({ threshold: 0.2, triggerOnce: true });
+    const [textRef, textInView] = useInView({ threshold: 0.2, triggerOnce: true });
+    const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
     const values = [
         'Сбор счетов-фактур от компании и их анализ.',
         'Оплата факторинговой компанией части или всей суммы счетов-фактур компании',
@@ -25,7 +25,7 @@ export const FactoringBlock: React.FC = () => {
                     ref={titleRef} 
                     className={classNames(styles.header,
                         // @ts-ignore
-                        textInView && styles.fade,
+                        titleInView && styles.fade,
                     )}>
                     Что такое факторинг
                 </div>

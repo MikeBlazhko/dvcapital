@@ -23,7 +23,7 @@ export const ProfileBlock: React.FC = () => {
     const [login, setLogin] = useState(false);
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
-    const [ref, inView] = useInView({ threshold: 0.2 });
+    const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
 
     const onScrollToBlock = (id: string) => {
         const element = document.getElementById(id);

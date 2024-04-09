@@ -14,8 +14,8 @@ import { useInView } from "react-intersection-observer";
 import { classNames } from "@/utils";
 
 export const HeaderBlock: React.FC = () => {
-    const [mainTextRef, mainTextiInView] = useInView({ threshold: 0.2 })
-    const [ref, inView] = useInView({ threshold: 0.2 })
+    const [mainTextRef, mainTextiInView] = useInView({ threshold: 0.2, triggerOnce: true })
+    const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
     const [drawer, setDrawer] = useState(false);
     const [modal, setModal] = useState(false);
     const onScrollToBlock = (id: string) => {

@@ -2,9 +2,22 @@ import React from 'react'
 
 export const AtSignIcon = () => {
     return (
-        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 21.8337C18.9455 21.8337 21.3333 19.4458 21.3333 16.5003C21.3333 13.5548 18.9455 11.167 16 11.167C13.0544 11.167 10.6666 13.5548 10.6666 16.5003C10.6666 19.4458 13.0544 21.8337 16 21.8337Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M21.3333 11.1667V17.8333C21.3333 18.8942 21.7547 19.9116 22.5049 20.6617C23.255 21.4119 24.2724 21.8333 25.3333 21.8333C26.3942 21.8333 27.4116 21.4119 28.1617 20.6617C28.9119 19.9116 29.3333 18.8942 29.3333 17.8333V16.5C29.3331 13.4907 28.3149 10.57 26.4443 8.21269C24.5737 5.85543 21.9607 4.20029 19.0302 3.51638C16.0996 2.83248 13.0239 3.16004 10.3031 4.44581C7.58232 5.73158 5.3765 7.89993 4.04432 10.5983C2.71213 13.2966 2.33193 16.3663 2.96553 19.3081C3.59913 22.25 5.20927 24.891 7.53414 26.8017C9.85902 28.7124 12.7619 29.7805 15.7707 29.8322C18.7796 29.8839 21.7175 28.9163 24.1066 27.0867" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="32" 
+            height="32" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            color="currentColor"
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            >
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                </path>
+                <polyline color='white' points="22,6 12,13 2,6">
+                </polyline>
         </svg>
     );
 }

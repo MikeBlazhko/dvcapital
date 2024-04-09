@@ -32,6 +32,7 @@
 }
 
 .values{
+    position: relative;
     margin-top: 60px;   
     display: flex;
     flex-direction: column;
@@ -40,6 +41,8 @@
         margin-top: 40px;
     }
 }
+
+
 
 .value{
     position: relative;
@@ -50,26 +53,23 @@
      @media (max-width: 768px) {
         padding: 60px 20px;
     }
+
+    .valueImage{
+        z-index: -1;
+        left: 0;
+        top: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(55%);
+        }
+    }
 }
 
-.valueImage{
-    z-index: -1;
-    left: 0;
-    top: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.valueImage img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(55%);
-
-    
-
-}
 
 .valueContent{
     display: flex;
@@ -88,4 +88,40 @@
         font-size: 22px;
         line-height: 26.82px;
     }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes infade {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+}
+
+.animateValue{
+    opacity: 0;
+    animation: infade ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  &.fade{
+    animation: fade ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+    
 }
