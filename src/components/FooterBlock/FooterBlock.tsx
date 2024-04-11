@@ -5,6 +5,8 @@ import { PhoneIcon } from "@/assets/icons/phone-icon";
 import { AtSignIcon } from "@/assets/icons/at-sign-icon";
 import { Modal } from "../Modal";
 import Link from "next/link";
+import { TelegramIcon } from "@/assets/icons/telegram-icon";
+import { WhatsappIcon } from "@/assets/icons/whatsapp-icon";
 
 export const FooterBlock: React.FC = () => {
     const [modal, setModal] = useState(false);
@@ -38,6 +40,14 @@ export const FooterBlock: React.FC = () => {
                             </span>
                         </div>
                        </a>
+                       <div className={styles.icons}>
+                        <a href="https://t.me/DVC_Factoring" target="_blank">
+                            <TelegramIcon/>
+                        </a>
+                        <a href="https://wa.me/message/ITENKR5W73ZAI1" target="_blank">
+                            <WhatsappIcon/>
+                        </a>
+                       </div>
                         <Button className={styles.button} onClick={() => setModal(true)}>Связаться</Button>
                     </div>
                     <div className={styles.info}>

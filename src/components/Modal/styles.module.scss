@@ -1,26 +1,49 @@
 .image{
     min-width: 600px;
     width: 600px;
-    height: inherit;
+    max-height: 561px;
     border-radius: 0 6px 6px 0;
     overflow: hidden;
     @media (max-width: 1201px) {
         min-width: 469px;
         width: 469px;
+        max-height: 535px;
+        max-width: unset;
+    }
+    @media (max-width: 1100px) and (min-width: 960px) {
+        min-width: 469px;
+        width: 469px;
+        max-height: 565px;
+    }
+    @media (max-width: 959px) and (min-width: 801px) {
+        min-width: 469px;
+        width: 469px;
+        max-height: 635px;
+    }
+    @media (max-width: 800px) and (min-width: 786px) {
+        min-width: 469px;
+        width: 469px;
+        max-height: 662px;
+    }
+    @media (max-width: 785px) and (min-width: 769px) {
+        min-width: 469px;
+        width: 469px;
+        max-height: 685px;
     }
     @media (max-width: 768px) {
         min-width: 370px;
         width: 370px;
+        max-height: unset;
     }
      @media (max-width: 650px) {
         display: none;
     }
-}
 
-.image img {
+    img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
 }
 
 .modal :global(.ant-modal-content){
@@ -33,6 +56,7 @@
 
 .block{
     display: inline-flex;
+    height: inherit;
 }
 
 

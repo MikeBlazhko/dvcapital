@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Image from "next/image";
-import UserImage from "@/assets/images/user.jpeg";
+import UserImage from "@/assets/images/user.png";
 import styles from './styles.module.scss';
 import { LikeIcon } from "@/assets/icons/like-icon";
 import { PlusIcon } from "@/assets/icons/plus-icon";
@@ -27,6 +27,12 @@ export const AdvantageBlock: React.FC = () => {
                     <div className={styles.header}>Наши преимущества</div>
                     <div className={styles.smallImage}>
                         <Image src={UserImage} alt={""}/>
+                        <div className={styles.imageText}>
+                            <div className={styles.imageMainText}>Генеральный директор “ДВ Капитал”</div>
+                            <div>
+                                А.А. Нечаев
+                            </div>
+                        </div>
                     </div>
                     <div className={styles.values}>
                         <div className={styles.value}>
@@ -50,6 +56,12 @@ export const AdvantageBlock: React.FC = () => {
                     // @ts-ignore
                     imageInView && styles.fade)}>
                     <Image src={UserImage} alt={""}/>
+                    <div className={styles.imageText}>
+                        <div className={styles.imageMainText}>Генеральный директор “ДВ Капитал”</div>
+                        <div>
+                            А.А. Нечаев
+                        </div>
+                    </div>
                 </div>
             </div>
             <Modal open={modal} onClose={() => setModal(false)}/>

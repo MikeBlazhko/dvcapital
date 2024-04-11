@@ -1,8 +1,8 @@
 import { XCircleIcon } from "@/assets/icons/x-circle-icon";
 import { Modal as AntModal, Form } from "antd";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import  ModalImage from "@/assets/images/modal.png";
+import  ModalImage from "@/assets/images/user2.png";
 import { UserIcon } from "@/assets/icons/user-icon";
 import { PhoneIcon } from "@/assets/icons/phone-icon";
 import styles from './styles.module.scss';
@@ -45,7 +45,6 @@ export const Modal: React.FC<Props> = ({open, onClose, defaultSuccess=false}) =>
         })
         .catch(error => console.error('Error:', error));
     }
-
     return (
         <AntModal 
             wrapClassName={styles.wrapModal} 
@@ -57,7 +56,7 @@ export const Modal: React.FC<Props> = ({open, onClose, defaultSuccess=false}) =>
             closeIcon={<div className={styles.closeIcon}><XCircleIcon/></div>}>
             <div className={styles.block}>
                 {!success && (
-                    <div className={styles.column}  >
+                    <div className={styles.column}>
                         <div className={styles.header}>
                             Ответим на все ваши вопросы и подберем нужный вид факторинга для вашей компании 
                             </div>
