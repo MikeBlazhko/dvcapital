@@ -24,7 +24,7 @@ export const FooterBlock: React.FC = () => {
                 <div className={styles.header}>Контакты</div>
                 <div className={styles.mainRow}>
                     <div className={styles.column}>
-                        <a href="tel:+88002222423">
+                        <a href="tel:+8(800) 222-24-23" >
                        <div className={styles.infoValue}>
                             <PhoneIcon/>
                             <span>
