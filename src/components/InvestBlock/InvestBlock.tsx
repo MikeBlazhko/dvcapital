@@ -76,7 +76,7 @@ const files = [
 ];
 
 export const InvestBlock: React.FC = () => {
-    const [activeTab, setActiveTab] = useState(tabs[3]);
+    const [activeTab, setActiveTab] = useState(tabs[0]);
 
     const fetch = async () => {
         // @ts-ignore
@@ -103,7 +103,6 @@ export const InvestBlock: React.FC = () => {
   }
 
    }, [activeTab]);
-
 
     return (
         <div className={styles.block}>
@@ -139,73 +138,74 @@ export const InvestBlock: React.FC = () => {
                 ))}
                </div>
                     <div className={styles.info}>
-                    {activeTab.value === TabAlias.General && (
-                    <div className={styles.mainInfo}>
-                        <div className={styles.mainInfoGrid}>
-                            {mainInfo.map((info) => (
-                                <div key={info.title} className={styles.mainInfoColumn}>
-                                    <div className={styles.mainInfoTitle}>{info.title}</div>
-                                     <div className={styles.mainInfoValue}>{info.value}</div>
-                                </div>
-
-                            ))}
-                        </div>
-                        <div className={styles.avatarColumn}>
-                            <div className={styles.avatar}>
-                                <Image src={UserImage} alt='general'/>
-                            </div>
-                            <div className={styles.mainInfoTitle}>
-                                Генеральный директор:
-                            </div>
-                            <div className={styles.mainInfoValue}>
-                                Нечаев Андрей Анатольевич
-                            </div>
-                        </div> 
-                    </div>
-
-                )}
-                {[TabAlias.Issue, TabAlias.Registration].includes(activeTab.value) && (
-                    <span className={styles.documentGrids}>
-                        {documents[activeTab.value].map((value) => (
-                            <div key={value} className={classNames('document-widget_wrapper', styles.documentGrid)} data-document_type={value}>
-                                <div className="document-widget_item button">
-                                    <a href="" target="_blank" className={styles.document}>
-                                        <div className={styles.documentIconBlock}>
-                                           <div className={styles.documentIcon}>
-                                             <DocumentIcon/>
-                                           </div>
-                                           <div className={styles.downloadIcon}>
-                                            <DownloadIcon/>
-                                           </div>
+                        {activeTab.value === TabAlias.General && (
+                            <div className={styles.mainInfo}>
+                                <div className={styles.mainInfoGrid}>
+                                    {mainInfo.map((info) => (
+                                        <div key={info.title} className={styles.mainInfoColumn}>
+                                            <div className={styles.mainInfoTitle}>{info.title}</div>
+                                            <div className={styles.mainInfoValue}>{info.value}</div>
                                         </div>
-                                        <div data-param="ORIGIN"></div>
-                                    </a>
+
+                                    ))}
                                 </div>
-                            </div>  
-                        ))}
-                    </span>
-                )}
-                {activeTab.value === TabAlias.Messages && (
-                    <div className={styles.filesGrid}>
-                        {files.map((value) => (
-                            <div key={value.label} >
-                                <div className="document-widget_item button">
-                                    <a href={value.href} target="_blank" className={styles.document}>
-                                        <div className={styles.documentIconBlock}>
-                                           <div className={styles.documentIcon}>
-                                             <DocumentIcon/>
-                                           </div>
-                                           <div className={styles.downloadIcon}>
-                                            <DownloadIcon/>
-                                           </div>
+                                <div className={styles.avatarColumn}>
+                                    <div className={styles.avatar}>
+                                        <Image src={UserImage} alt='general'/>
+                                    </div>
+                                    <div className={styles.mainInfoTitle}>
+                                        Генеральный директор:
+                                    </div>
+                                    <div className={styles.mainInfoValue}>
+                                        Нечаев Андрей Анатольевич
+                                    </div>
+                                </div> 
+                            </div>
+
+                        )}
+                        {[TabAlias.Issue, TabAlias.Registration].includes(activeTab.value) && (
+                            <span className={styles.documentGrids}>
+                                {documents[activeTab.value].map((value) => (
+                                    <div key={value} className={classNames('document-widget_wrapper', styles.documentGrid)} data-document_type={value}>
+                                        <div className="document-widget_item button">
+                                            <a href="" target="_blank" className={styles.document}>
+                                                <div className={styles.documentIconBlock}>
+                                                <div className={styles.documentIcon}>
+                                                    <DocumentIcon/>
+                                                </div>
+                                                <div className={styles.downloadIcon}>
+                                                    <DownloadIcon/>
+                                                </div>
+                                                </div>
+                                                <div data-param="ORIGIN"></div>
+                                            </a>
                                         </div>
-                                        <div>{value.label}</div>
-                                    </a>
-                                </div>
-                            </div>  
-                        ))}
+                                    </div>  
+                                ))}
+                            </span>
+                        )}
+                        {activeTab.value === TabAlias.Messages && (
+                            <div className={styles.filesGrid}>
+                                {files.map((value) => (
+                                    <div key={value.label} >
+                                        <div className="document-widget_item button">
+                                            <a href={value.href} target="_blank" className={styles.document}>
+                                                <div className={styles.documentIconBlock}>
+                                                <div className={styles.documentIcon}>
+                                                    <DocumentIcon/>
+                                                </div>
+                                                <div className={styles.downloadIcon}>
+                                                    <DownloadIcon/>
+                                                </div>
+                                                </div>
+                                                <div>{value.label}</div>
+                                            </a>
+                                        </div>
+                                    </div>  
+                                ))}
+                            </div>
+                        )}
                     </div>
-                )}
                </div>
                 <div className={styles.label}>
                 <FullUserIcon/>
@@ -214,9 +214,6 @@ export const InvestBlock: React.FC = () => {
                <div className={styles.footer}>
                 © 2024 ООО «ДВ Капитал»
                </div>
-              
-            </div>
         </div>
     );
-
 }
