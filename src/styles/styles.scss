@@ -57,6 +57,10 @@ body {
 
 body {
     font-family: 'Montserrat', sans-serif;
+
+    &::-webkit-scrollbar{
+      width: 0px
+    }
 }
 
 a {
