@@ -8,3 +8,4 @@ export * from './StagesBlock';
 export * from './FooterBlock';
 export * from "./FaqBlock";
 export * from './ProfileBlock';
+export * from './InvestBlock';

@@ -60,7 +60,13 @@ export const HeaderBlock: React.FC = () => {
                             onClick={() => onScrollToBlock('FooterBlock')}>
                                 Контакты
                         </div>
-                        <Link href="/profile">
+                       
+                        <Link href="/investors" target="_blank">
+                            <div className={styles.button}>
+                                Инвесторам
+                            </div>
+                        </Link>
+                         <Link href="/profile">
                             <div className={styles.button}>
                                 Личный кабинет
                             </div>
@@ -121,6 +127,13 @@ export const HeaderBlock: React.FC = () => {
                         onClick={() => onScrollToBlock('FooterBlock')}>
                             Контакты
                     </div>
+                   
+                    <Link href={'/investors'} target="_blank">
+                        <div 
+                            className={styles.drawwerButton}>
+                                Инвесторам
+                        </div>
+                    </Link>
                     <Link href={'/profile'}>
                         <div 
                             className={styles.drawwerButton}>
