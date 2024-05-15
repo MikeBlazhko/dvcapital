@@ -1,6 +1,8 @@
 .block{
     position: relative;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     height: 100vh;
 }
 
@@ -30,9 +32,12 @@
 }
 
 .content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     max-width: 1480px;
-    padding-top: 63px;
-    padding-bottom: 78px;
+    padding: 63px 0;
     margin:  0 auto;
     width: 100%;
     @media (max-width: 1620px) {
@@ -77,8 +82,8 @@
         width: 2px;
         margin: 0 20px;
         @media (max-width: 1620px) {
-        margin: 0 16px;
-    }
+            margin: 0 16px;
+        }
     }
 
     .topRowText{
@@ -130,6 +135,7 @@
     flex-direction: row;
 
     @media (max-width: 980px) {
+        min-height: 133px;
         flex-direction: column;
         border-radius: 24px;
         overflow: hidden;
@@ -172,6 +178,7 @@
 }
 
 .info{
+    margin-bottom: auto;
     background: #000000A6;
     width: 100%;
     height: 578px;
@@ -193,6 +200,20 @@
     flex-direction: row;
     @media (max-width: 980px) {
         flex-direction: column;
+        overflow-y: scroll;
+        max-height: calc(50vh - 3 * 16px);
+         &::-webkit-scrollbar {
+        width: 20px;
+        height: 0;
+        background: black;
+        border-radius: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #3A7DFF;
+            border-radius: 6px;
+            border: 7px solid black;
+            background-clip: padding-box;
+        }
     }
 
     .mainInfoGrid{
@@ -295,7 +316,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    overflow: scroll;
+    overflow-y: scroll;
     max-height: calc(578px - 2 * 63px);
       @media (max-width: 1620px) {
         gap: 10px;
@@ -303,7 +324,20 @@
     }
     @media (max-width: 980px) {
         gap: 10px;
-        max-height: calc(497px - 2 * 16px);
+        max-height: calc(50vh - 3 * 16px);
+    }
+
+    &::-webkit-scrollbar {
+        width: 20px;
+        height: 0;
+        background: black;
+        border-radius: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #3A7DFF;
+        border-radius: 6px;
+        border: 7px solid black;
+        background-clip: padding-box;
     }
 }
 
@@ -409,6 +443,7 @@
 
 
 .filesGrid{
+    
     display: grid;
     row-gap: 20px;
     column-gap: 40px;
@@ -420,6 +455,21 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 24.38px;
+
+    
+
+    &::-webkit-scrollbar {
+        width: 20px;
+        height: 0;
+        background: black;
+        border-radius: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #3A7DFF;
+        border-radius: 6px;
+        border: 7px solid black;
+        background-clip: padding-box;
+    }
 
     @media (max-width: 1620px) {
         font-size: 17px;
@@ -433,7 +483,7 @@
         line-height: 17.07px;
         grid-template-columns: repeat(1, 1fr);
         row-gap: 10px;
-        max-height: calc(497px - 2 * 16px);
+        max-height: calc(50vh - 3 * 16px);
     }
 }
 
@@ -471,8 +521,9 @@
 }
 
 .footer{
-    padding: 4px 11px;
+    margin-bottom: 20px;
     margin-top: 95px;
+    padding: 4px 11px;
     width: 100%;
     background: #00000059;
     border-radius: 10px;
@@ -490,7 +541,7 @@
     }
     @media (max-width: 980px) {
         text-align: start;
-        margin-top: 10px;
+        padding-top: 10px;
         font-size: 8px;
         line-height: 9.75px;
     }

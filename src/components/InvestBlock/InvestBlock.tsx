@@ -76,7 +76,7 @@ const files = [
 ];
 
 export const InvestBlock: React.FC = () => {
-    const [activeTab, setActiveTab] = useState(tabs[0]);
+    const [activeTab, setActiveTab] = useState(tabs[3]);
 
     const fetch = async () => {
         // @ts-ignore
@@ -206,14 +206,15 @@ export const InvestBlock: React.FC = () => {
                             </div>
                         )}
                     </div>
+                    <div className={styles.footer}>
+                        © 2024 ООО «ДВ Капитал»
+                    </div>
                </div>
                 <div className={styles.label}>
                 <FullUserIcon/>
                 <span>Cтраница для инвесторов</span>
                </div>
-               <div className={styles.footer}>
-                © 2024 ООО «ДВ Капитал»
-               </div>
+            
         </div>
     );
 }
