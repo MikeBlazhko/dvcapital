@@ -61,11 +61,11 @@ export const HeaderBlock: React.FC = () => {
                                 Контакты
                         </div>
                        
-                        <Link href="/investors" target="_blank">
+                        {/* <Link href="/investors" target="_blank">
                             <div className={styles.button}>
                                 Инвесторам
                             </div>
-                        </Link>
+                        </Link> */}
                          <Link href="/profile">
                             <div className={styles.button}>
                                 Личный кабинет
@@ -128,12 +128,12 @@ export const HeaderBlock: React.FC = () => {
                             Контакты
                     </div>
                    
-                    <Link href={'/investors'} target="_blank">
+                    {/* <Link href={'/investors'} target="_blank">
                         <div 
                             className={styles.drawwerButton}>
                                 Инвесторам
                         </div>
-                    </Link>
+                    </Link> */}
                     <Link href={'/profile'}>
                         <div 
                             className={styles.drawwerButton}>

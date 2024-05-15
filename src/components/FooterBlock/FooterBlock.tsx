@@ -69,9 +69,9 @@ export const FooterBlock: React.FC = () => {
                         <span onClick={() => onScrollToBlock('StagesBlock')}>Этапы работы</span>
                         <span onClick={() => onScrollToBlock('FaqBlock')}>FAQ</span>
                         <span>Контакты</span>
-                        <Link href="/investors" target="_blank">
+                        {/* <Link href="/investors" target="_blank">
                             <span>Инвесторам</span>
-                        </Link>
+                        </Link> */}
                         <Link href="/profile">
                             <span>Личный кабинет</span>
                         </Link>
